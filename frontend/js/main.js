@@ -12,6 +12,7 @@ const CONFIG = {
   // Your backend API URL (change when deployed)
   // Local development:  http://localhost:5000/api/contact
   // Deployed (Render):  https://your-app.onrender.com/api/contact
+  
   API_URL: 'https://hassanmehdiportfolio-production.up.railway.app/api/contact',
 
   // Typed text phrases in the hero section
