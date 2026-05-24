@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hassan Mehdi | Full Stack Web Developer</title>
+  <meta name="description" content="Hassan Mehdi — Full Stack Web Developer specializing in MERN stack. Building fast, modern, and scalable web applications." />
+  <meta property="og:title"       content="Hassan Mehdi | Full Stack Developer" />
+  <meta property="og:description" content="I build fast, modern, and scalable web applications." />
+  <meta property="og:type"        content="website" />
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@700;800&family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
+  <!-- Your Custom CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ═══ LOADER ═══ -->
+  <div id="loader" aria-hidden="true">
+    <div class="loader-logo">&lt;HM/&gt;</div>
+    <div class="loader-bar"><div class="loader-fill"></div></div>
+    <p class="loader-text">Loading Portfolio...</p>
+  </div>
+
+  <!-- ═══ BACKGROUND ═══ -->
+  <div class="grid-bg" aria-hidden="true"></div>
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+  <!-- ══════════════════════════════
+       NAVBAR
+  ══════════════════════════════ -->
+  <nav id="navbar" class="navbar navbar-expand-lg" role="navigation" aria-label="Main navigation">
+    <div class="container">
+
+      <a class="navbar-brand" href="#hero" aria-label="Hassan Mehdi Home">
+        &lt;<span>HM</span>/&gt;
+      </a>
+
+      <div class="d-flex align-items-center gap-3 order-lg-last">
+        <button id="themeToggle" aria-label="Toggle dark/light mode" title="Toggle Theme">
+          <i class="bi bi-sun-fill" aria-hidden="true"></i>
+        </button>
+        <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse" data-bs-target="#navMenu"
+                aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="bi bi-list fs-4" style="color:var(--text2)"></i>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto gap-1">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#testimonials">Reviews</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- ══════════════════════════════
+       HERO SECTION
+  ══════════════════════════════ -->
+  <section id="hero" aria-label="Hero Section">
+    <div class="hero-orb hero-orb-1" aria-hidden="true"></div>
+    <div class="hero-orb hero-orb-2" aria-hidden="true"></div>
+
+    <div class="container hero-container">
+      <div class="row align-items-center gy-5">
+
+        <!-- Text Side -->
+        <div class="col-lg-7">
+          <span class="hero-label">Available for Hire</span>
+          <h1 class="hero-title">
+            Hassan Mehdi
+            <span class="hero-title-outline">Full Stack Dev.</span>
+          </h1>
+          <p class="hero-tagline">
+            <span id="typed-text" aria-live="polite"></span><span class="typed-cursor" aria-hidden="true">|</span>
+          </p>
+          <div class="hero-btns">
+            <button class="btn-primary-custom js-scroll" data-target="#projects">
+              <i class="bi bi-grid-3x3-gap" aria-hidden="true"></i> View Projects
+            </button>
+            <button class="btn-outline-custom js-scroll" data-target="#contact">
+              <i class="bi bi-envelope" aria-hidden="true"></i> Contact Me
+            </button>
+            <!--
+              ★★★ CV DOWNLOAD ★★★
+              1. Place your CV PDF inside:  frontend/assets/Hassan_Mehdi_CV.pdf
+              2. The link below already points to it — nothing else to change.
+            -->
+            <a href="./assets/Hassan_Mehdi_CV.pdf" download="Hassan_Mehdi_CV.pdf" class="btn-outline-custom">
+              <i class="bi bi-download" aria-hidden="true"></i> Download CV
+            </a>
+          </div>
+          <div class="hero-stats" aria-label="Quick stats">
+            <div class="hero-stat">
+              <span class="hero-stat-num counter" data-target="15">0</span><span class="hero-stat-num">+</span>
+              <span class="hero-stat-label">Projects</span>
+            </div>
+            <div class="hero-stat-divider" aria-hidden="true"></div>
+            <div class="hero-stat">
+              <span class="hero-stat-num counter" data-target="2">0</span><span class="hero-stat-num">+</span>
+              <span class="hero-stat-label">Years Exp.</span>
+            </div>
+            <div class="hero-stat-divider" aria-hidden="true"></div>
+            <div class="hero-stat">
+              <span class="hero-stat-num counter" data-target="10">0</span><span class="hero-stat-num">+</span>
+              <span class="hero-stat-label">Clients</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Avatar Side -->
+        <div class="col-lg-5 d-flex justify-content-center">
+          <div class="hero-avatar-wrap">
+            <div class="hero-avatar" aria-label="Developer illustration">
+              <div class="avatar-ring" aria-hidden="true"></div>
+              <span class="avatar-emoji">👨‍💻</span>
+            </div>
+            <div class="status-pill">
+              <span class="status-dot" aria-hidden="true"></span>
+              Open to Work
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="scroll-hint" aria-hidden="true">
+      <i class="bi bi-chevron-down"></i>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════
+       ABOUT SECTION
+  ══════════════════════════════ -->
+  <section id="about" aria-label="About Me">
+    <div class="container">
+      <div class="row align-items-center gy-5">
+
+        <div class="col-lg-5 d-flex justify-content-center reveal">
+          <div class="about-img-wrap">
+            <div class="about-img" aria-label="Hassan Mehdi photo placeholder">👨‍💻</div>
+            <div class="exp-badge" aria-label="15+ projects completed">
+              <strong>15+</strong>
+              <span>Projects</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-7 reveal reveal-delay-2">
+          <span class="section-tag">About Me</span>
+          <h2 class="section-title">Crafting Digital <span class="accent-text">Experiences</span></h2>
+          <div class="section-line"></div>
+          <p class="about-bio">I am a Full Stack Web Developer focused on building modern, responsive, and high-performance web applications using the MERN stack. I love turning ideas into real products that users genuinely enjoy using.</p>
+          <p class="about-bio">With experience at Decodelabs and freelancing on Fiverr, I have delivered 15+ production-grade applications for clients worldwide. Clean code and scalable architecture are my priorities.</p>
+          <ul class="about-facts" aria-label="Quick facts">
+            <li><i class="bi bi-geo-alt-fill" aria-hidden="true"></i> Based in Pakistan</li>
+            <li><i class="bi bi-briefcase-fill" aria-hidden="true"></i> Decodelabs — May 2025 to Feb 2026</li>
+            <li><i class="bi bi-star-fill" aria-hidden="true"></i> 5-star Fiverr Freelancer</li>
+            <li><i class="bi bi-code-slash" aria-hidden="true"></i> Specialized in MERN Stack</li>
+          </ul>
+          <!-- Same CV file — just copy your PDF into frontend/assets/ -->
+          <a href="assets/Hassan_Mehdi_CV.pdf" download="Hassan_Mehdi_CV.pdf" class="btn-primary-custom mt-2">
+            <i class="bi bi-download" aria-hidden="true"></i> Download CV
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════
+       SKILLS SECTION
+  ══════════════════════════════ -->
+  <section id="skills" aria-label="Skills">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-lg-6 reveal">
+          <span class="section-tag">My Skills</span>
+          <h2 class="section-title">Tech <span class="accent-text">Arsenal</span></h2>
+          <div class="section-line"></div>
+        </div>
+        <div class="col-lg-6 d-flex align-items-end reveal reveal-delay-2">
+          <p class="section-sub">Full stack coverage — from pixel-perfect frontends to robust backend APIs and databases.</p>
+        </div>
+      </div>
+
+      <p class="skills-cat-label reveal">Frontend Development</p>
+      <div class="row g-3 mb-4">
+        <div class="col-6 col-md-4 col-lg-2 reveal"><div class="skill-card"><span class="skill-icon">🌐</span><div class="skill-info"><h6>HTML5</h6><div class="skill-bar"><div class="skill-fill" data-width="95"></div></div></div></div></div>
+        <div class="col-6 col-md-4 col-lg-2 reveal reveal-delay-1"><div class="skill-card"><span class="skill-icon">🎨</span><div class="skill-info"><h6>CSS3</h6><div class="skill-bar"><div class="skill-fill" data-width="90"></div></div></div></div></div>
+        <div class="col-6 col-md-4 col-lg-2 reveal reveal-delay-2"><div class="skill-card"><span class="skill-icon">⚡</span><div class="skill-info"><h6>JavaScript</h6><div class="skill-bar"><div class="skill-fill" data-width="88"></div></div></div></div></div>
+        <div class="col-6 col-md-4 col-lg-2 reveal reveal-delay-3"><div class="skill-card"><span class="skill-icon">⚛️</span><div class="skill-info"><h6>React.js</h6><div class="skill-bar"><div class="skill-fill" data-width="85"></div></div></div></div></div>
+        <div class="col-6 col-md-4 col-lg-2 reveal reveal-delay-4"><div class="skill-card"><span class="skill-icon">🅱️</span><div class="skill-info"><h6>Bootstrap</h6><div class="skill-bar"><div class="skill-fill" data-width="92"></div></div></div></div></div>
+        <div class="col-6 col-md-4 col-lg-2 reveal reveal-delay-5"><div class="skill-card"><span class="skill-icon">💅</span><div class="skill-info"><h6>Tailwind</h6><div class="skill-bar"><div class="skill-fill" data-width="80"></div></div></div></div></div>
+      </div>
+
+      <p class="skills-cat-label reveal">Backend Development</p>
+      <div class="row g-3 mb-4">
+        <div class="col-6 col-md-3 reveal"><div class="skill-card"><span class="skill-icon">🟢</span><div class="skill-info"><h6>Node.js</h6><div class="skill-bar"><div class="skill-fill" data-width="82"></div></div></div></div></div>
+        <div class="col-6 col-md-3 reveal reveal-delay-1"><div class="skill-card"><span class="skill-icon">🚂</span><div class="skill-info"><h6>Express.js</h6><div class="skill-bar"><div class="skill-fill" data-width="80"></div></div></div></div></div>
+        <div class="col-6 col-md-3 reveal reveal-delay-2"><div class="skill-card"><span class="skill-icon">🔌</span><div class="skill-info"><h6>REST APIs</h6><div class="skill-bar"><div class="skill-fill" data-width="85"></div></div></div></div></div>
+        <div class="col-6 col-md-3 reveal reveal-delay-3"><div class="skill-card"><span class="skill-icon">🔑</span><div class="skill-info"><h6>JWT Auth</h6><div class="skill-bar"><div class="skill-fill" data-width="78"></div></div></div></div></div>
+      </div>
+
+      <p class="skills-cat-label reveal">Database &amp; Tools</p>
+      <div class="row g-3">
+        <div class="col-6 col-md-3 reveal"><div class="skill-card"><span class="skill-icon">🍃</span><div class="skill-info"><h6>MongoDB</h6><div class="skill-bar"><div class="skill-fill" data-width="82"></div></div></div></div></div>
+        <div class="col-6 col-md-3 reveal reveal-delay-1"><div class="skill-card"><span class="skill-icon">🐬</span><div class="skill-info"><h6>MySQL</h6><div class="skill-bar"><div class="skill-fill" data-width="70"></div></div></div></div></div>
+        <div class="col-6 col-md-3 reveal reveal-delay-2"><div class="skill-card"><span class="skill-icon">🐙</span><div class="skill-info"><h6>Git / GitHub</h6><div class="skill-bar"><div class="skill-fill" data-width="90"></div></div></div></div></div>
+        <div class="col-6 col-md-3 reveal reveal-delay-3"><div class="skill-card"><span class="skill-icon">▲</span><div class="skill-info"><h6>Vercel</h6><div class="skill-bar"><div class="skill-fill" data-width="88"></div></div></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════
+       EXPERIENCE SECTION
+  ══════════════════════════════ -->
+  <section id="experience" aria-label="Work Experience">
+    <div class="container">
+      <div class="text-center mb-5 reveal">
+        <span class="section-tag">Work History</span>
+        <h2 class="section-title">My <span class="accent-text">Experience</span></h2>
+        <div class="section-line mx-auto"></div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="timeline" role="list">
+
+            <article class="timeline-item reveal" role="listitem">
+              <div class="timeline-dot" aria-hidden="true"></div>
+              <div class="timeline-card">
+                <time class="timeline-date" datetime="2025-05"><i class="bi bi-calendar3" aria-hidden="true"></i> May 2025 – Feb 2026</time>
+                <h3 class="timeline-role">Full Stack Web Developer</h3>
+                <p class="timeline-company"><i class="bi bi-building" aria-hidden="true"></i> Decodelabs — Full-time</p>
+                <p class="timeline-desc">Built and maintained production web applications using the MERN stack. Developed RESTful APIs, optimized database queries, and collaborated with design and product teams to deliver high-quality software on deadlines.</p>
+                <div class="timeline-tags">
+                  <span class="tech-tag">React.js</span><span class="tech-tag">Node.js</span><span class="tech-tag">MongoDB</span><span class="tech-tag">Express.js</span><span class="tech-tag">REST API</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="timeline-item reveal reveal-delay-2" role="listitem">
+              <div class="timeline-dot dot-gold" aria-hidden="true"></div>
+              <div class="timeline-card">
+                <time class="timeline-date" datetime="2023"><i class="bi bi-calendar3" aria-hidden="true"></i> 2023 – Present</time>
+                <h3 class="timeline-role">Freelance Full Stack Developer</h3>
+                <p class="timeline-company"><i class="bi bi-globe" aria-hidden="true"></i> Fiverr — Freelance</p>
+                <p class="timeline-desc">Delivered 15+ custom web applications for international clients across e-commerce, SaaS, and portfolio domains. Managed projects from requirements to deployment and post-launch support.</p>
+                <div class="timeline-tags">
+                  <span class="tech-tag">MERN Stack</span><span class="tech-tag">Freelancing</span><span class="tech-tag">Client Management</span><span class="tech-tag">Deployment</span>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════
+       PROJECTS SECTION
+  ══════════════════════════════ -->
+  <section id="projects" aria-label="Projects">
+    <div class="container">
+      <div class="text-center mb-5 reveal">
+        <span class="section-tag">Portfolio</span>
+        <h2 class="section-title">Featured <span class="accent-text">Projects</span></h2>
+        <div class="section-line mx-auto"></div>
+        <p class="section-sub mx-auto mt-2">Real-world applications built with modern technologies.</p>
+      </div>
+
+      <div class="filter-bar justify-content-center reveal" role="group" aria-label="Project filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="react">React</button>
+        <button class="filter-btn" data-filter="node">Node.js</button>
+        <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+      </div>
+
+      <div class="row g-4" id="projectsGrid">
+
+        <div class="col-md-6 col-lg-4 project-item reveal" data-category="fullstack">
+          <article class="project-card">
+            <div class="project-thumb thumb-blue" aria-label="E-Commerce Platform preview">
+              <span class="thumb-emoji" aria-hidden="true">🛒</span>
+              <div class="project-overlay">
+                <a href="#" class="overlay-btn btn-live" aria-label="Live demo of E-Commerce Platform"><i class="bi bi-box-arrow-up-right"></i> Live</a>
+                <a href="#" class="overlay-btn btn-gh" aria-label="GitHub repo of E-Commerce Platform"><i class="bi bi-github"></i> GitHub</a>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">E-Commerce Platform</h3>
+              <p class="project-desc">Full-featured store with cart, user auth, Stripe payments, and a complete admin dashboard.</p>
+              <div class="project-tags"><span class="tech-tag">React</span><span class="tech-tag">Node.js</span><span class="tech-tag">MongoDB</span><span class="tech-tag">Stripe</span></div>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-md-6 col-lg-4 project-item reveal reveal-delay-1" data-category="react">
+          <article class="project-card">
+            <div class="project-thumb thumb-teal" aria-label="Admin Dashboard preview">
+              <span class="thumb-emoji" aria-hidden="true">📊</span>
+              <div class="project-overlay">
+                <a href="#" class="overlay-btn btn-live"><i class="bi bi-box-arrow-up-right"></i> Live</a>
+                <a href="#" class="overlay-btn btn-gh"><i class="bi bi-github"></i> GitHub</a>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">React Admin Dashboard</h3>
+              <p class="project-desc">Analytics dashboard with real-time charts, data tables, and user management panel.</p>
+              <div class="project-tags"><span class="tech-tag">React</span><span class="tech-tag">Chart.js</span><span class="tech-tag">Bootstrap</span></div>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-md-6 col-lg-4 project-item reveal reveal-delay-2" data-category="fullstack">
+          <article class="project-card">
+            <div class="project-thumb thumb-green" aria-label="Blog CMS preview">
+              <span class="thumb-emoji" aria-hidden="true">📝</span>
+              <div class="project-overlay">
+                <a href="#" class="overlay-btn btn-live"><i class="bi bi-box-arrow-up-right"></i> Live</a>
+                <a href="#" class="overlay-btn btn-gh"><i class="bi bi-github"></i> GitHub</a>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Blog Platform CMS</h3>
+              <p class="project-desc">Full blog with markdown editor, categories, user auth, and comment system.</p>
+              <div class="project-tags"><span class="tech-tag">MERN</span><span class="tech-tag">JWT</span><span class="tech-tag">Markdown</span></div>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-md-6 col-lg-4 project-item reveal" data-category="node">
+          <article class="project-card">
+            <div class="project-thumb thumb-orange" aria-label="REST API preview">
+              <span class="thumb-emoji" aria-hidden="true">🔌</span>
+              <div class="project-overlay">
+                <a href="#" class="overlay-btn btn-live"><i class="bi bi-box-arrow-up-right"></i> Live</a>
+                <a href="#" class="overlay-btn btn-gh"><i class="bi bi-github"></i> GitHub</a>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">REST API Service</h3>
+              <p class="project-desc">Production-ready API with JWT auth, rate limiting, and full CRUD operations.</p>
+              <div class="project-tags"><span class="tech-tag">Node.js</span><span class="tech-tag">Express</span><span class="tech-tag">MongoDB</span></div>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-md-6 col-lg-4 project-item reveal reveal-delay-1" data-category="react">
+          <article class="project-card">
+            <div class="project-thumb thumb-purple" aria-label="Portfolio Builder preview">
+              <span class="thumb-emoji" aria-hidden="true">🎯</span>
+              <div class="project-overlay">
+                <a href="#" class="overlay-btn btn-live"><i class="bi bi-box-arrow-up-right"></i> Live</a>
+                <a href="#" class="overlay-btn btn-gh"><i class="bi bi-github"></i> GitHub</a>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Portfolio Builder</h3>
+              <p class="project-desc">Dynamic portfolio generator with real-time preview and customizable templates.</p>
+              <div class="project-tags"><span class="tech-tag">React</span><span class="tech-tag">CSS</span><span class="tech-tag">LocalStorage</span></div>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-md-6 col-lg-4 project-item reveal reveal-delay-2" data-category="fullstack">
+          <article class="project-card">
+            <div class="project-thumb thumb-cyan" aria-label="Task Manager preview">
+              <span class="thumb-emoji" aria-hidden="true">✅</span>
+              <div class="project-overlay">
+                <a href="#" class="overlay-btn btn-live"><i class="bi bi-box-arrow-up-right"></i> Live</a>
+                <a href="#" class="overlay-btn btn-gh"><i class="bi bi-github"></i> GitHub</a>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Task Manager App</h3>
+              <p class="project-desc">Kanban task board with drag-and-drop, team collaboration, and deadline tracking.</p>
+              <div class="project-tags"><span class="tech-tag">React</span><span class="tech-tag">Node.js</span><span class="tech-tag">Socket.io</span></div>
+            </div>
+          </article>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════
+       SERVICES SECTION
+  ══════════════════════════════ -->
+  <section id="services" aria-label="Services">
+    <div class="container">
+      <div class="text-center mb-5 reveal">
+        <span class="section-tag">What I Offer</span>
+        <h2 class="section-title">My <span class="accent-text">Services</span></h2>
+        <div class="section-line mx-auto"></div>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4 reveal"><div class="service-card"><div class="service-icon"><i class="bi bi-layers-fill" aria-hidden="true"></i></div><h3 class="service-title">Full Stack Development</h3><p class="service-desc">End-to-end web applications using MERN stack — from database design to deployed frontend.</p></div></div>
+        <div class="col-md-6 col-lg-4 reveal reveal-delay-1"><div class="service-card"><div class="service-icon"><i class="bi bi-display" aria-hidden="true"></i></div><h3 class="service-title">React.js Frontend</h3><p class="service-desc">Pixel-perfect, component-based UIs with smooth animations and excellent user experience.</p></div></div>
+        <div class="col-md-6 col-lg-4 reveal reveal-delay-2"><div class="service-card"><div class="service-icon"><i class="bi bi-server" aria-hidden="true"></i></div><h3 class="service-title">Backend API Development</h3><p class="service-desc">Scalable RESTful APIs with Node.js, Express, JWT authentication, and MongoDB.</p></div></div>
+        <div class="col-md-6 col-lg-4 reveal reveal-delay-1"><div class="service-card"><div class="service-icon"><i class="bi bi-bug-fill" aria-hidden="true"></i></div><h3 class="service-title">Bug Fixing &amp; Debugging</h3><p class="service-desc">Quick diagnosis and resolution of bugs in JavaScript, React, and Node.js codebases.</p></div></div>
+        <div class="col-md-6 col-lg-4 reveal reveal-delay-2"><div class="service-card"><div class="service-icon"><i class="bi bi-speedometer2" aria-hidden="true"></i></div><h3 class="service-title">Performance Optimization</h3><p class="service-desc">Improve load times, Core Web Vitals, and runtime performance through modern techniques.</p></div></div>
+        <div class="col-md-6 col-lg-4 reveal reveal-delay-3"><div class="service-card"><div class="service-icon"><i class="bi bi-database-fill" aria-hidden="true"></i></div><h3 class="service-title">Database Integration</h3><p class="service-desc">MongoDB and MySQL schema design, indexing, and optimized query strategies.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════
+       TESTIMONIALS SECTION
+  ══════════════════════════════ -->
+  <section id="testimonials" aria-label="Client Testimonials">
+    <div class="container">
+      <div class="text-center mb-5 reveal">
+        <span class="section-tag">Client Reviews</span>
+        <h2 class="section-title">What Clients <span class="accent-text">Say</span></h2>
+        <div class="section-line mx-auto"></div>
+        <p class="demo-note"><i class="bi bi-info-circle" aria-hidden="true"></i> Demo reviews — replace with your real Fiverr reviews</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4 reveal">
+          <blockquote class="testimonial-card">
+            <div class="stars" aria-label="5 stars">★★★★★</div>
+            <p class="testimonial-text">Hassan delivered an exceptional e-commerce platform ahead of schedule. Outstanding code quality with clear communication at every step. Will definitely hire again!</p>
+            <footer class="t-profile">
+              <div class="t-avatar" aria-hidden="true">🧑‍💼</div>
+              <div><cite class="t-name">James Morrison</cite><span class="t-role">E-commerce Founder 🇺🇸</span></div>
+            </footer>
+          </blockquote>
+        </div>
+        <div class="col-md-6 col-lg-4 reveal reveal-delay-2">
+          <blockquote class="testimonial-card">
+            <div class="stars" aria-label="5 stars">★★★★★</div>
+            <p class="testimonial-text">Excellent work on our admin dashboard. Hassan understood requirements perfectly and delivered a clean, well-structured React app with great attention to detail.</p>
+            <footer class="t-profile">
+              <div class="t-avatar" aria-hidden="true">👩‍💻</div>
+              <div><cite class="t-name">Sarah Chen</cite><span class="t-role">Product Manager 🇸🇬</span></div>
+            </footer>
+          </blockquote>
+        </div>
+        <div class="col-md-6 col-lg-4 reveal reveal-delay-4">
+          <blockquote class="testimonial-card">
+            <div class="stars" aria-label="5 stars">★★★★★</div>
+            <p class="testimonial-text">Fast, reliable, and professional. The REST API is rock-solid and the documentation was a bonus. Top-tier developer who truly cares about quality.</p>
+            <footer class="t-profile">
+              <div class="t-avatar" aria-hidden="true">👨‍🔬</div>
+              <div><cite class="t-name">Ahmed Al-Farsi</cite><span class="t-role">CTO, Tech Agency 🇦🇪</span></div>
+            </footer>
+          </blockquote>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════
+       CONTACT SECTION
+  ══════════════════════════════ -->
+  <section id="contact" aria-label="Contact Form">
+    <div class="container">
+      <div class="text-center mb-5 reveal">
+        <span class="section-tag">Get In Touch</span>
+        <h2 class="section-title">Let's <span class="accent-text">Work Together</span></h2>
+        <div class="section-line mx-auto"></div>
+      </div>
+      <div class="row g-5">
+
+        <!-- Contact Info -->
+        <div class="col-lg-5 reveal">
+          <p class="about-bio">Have a project in mind? Send me a message and I'll get back to you within 24 hours.</p>
+
+          <div class="contact-card">
+            <div class="contact-icon"><i class="bi bi-envelope-fill" aria-hidden="true"></i></div>
+            <div>
+              <p class="contact-label">Email</p>
+              <!-- ★ Replace with your real email address -->
+              <p class="contact-val">zahoorabbas444@gmail.com</p>
+            </div>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-icon green-icon"><i class="bi bi-whatsapp" aria-hidden="true"></i></div>
+            <div>
+              <p class="contact-label">WhatsApp</p>
+              <!-- ★ Replace with your real WhatsApp number -->
+              <p class="contact-val">+92-3339935302</p>
+            </div>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-icon gold-icon"><i class="bi bi-briefcase-fill" aria-hidden="true"></i></div>
+            <div>
+              <p class="contact-label">Fiverr</p>
+              <!-- ★ Replace with your Fiverr profile link -->
+              <p class="contact-val">fiverr.com/hassanmehdi</p>
+            </div>
+          </div>
+
+          <div class="social-row" aria-label="Social media links">
+            <a href="#" class="social-btn" aria-label="GitHub" title="GitHub"><i class="bi bi-github" aria-hidden="true"></i></a>
+            <a href="https://www.linkedin.com/in/hassan-mehdi-4975542a1/" class="social-btn" aria-label="LinkedIn" title="LinkedIn"><i class="bi bi-linkedin" aria-hidden="true"></i></a>
+            <a href="#" class="social-btn" aria-label="WhatsApp" title="WhatsApp"><i class="bi bi-whatsapp" aria-hidden="true"></i></a>
+            <a href="#" class="social-btn" aria-label="Fiverr" title="Fiverr"><i class="bi bi-briefcase" aria-hidden="true"></i></a>
+            <a href="#" class="social-btn" aria-label="Twitter/X" title="Twitter/X"><i class="bi bi-twitter-x" aria-hidden="true"></i></a>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="col-lg-7 reveal reveal-delay-2">
+          <div class="form-box">
+            <div id="formSuccess" class="form-alert alert-success-custom" role="alert" style="display:none">
+              <i class="bi bi-check-circle-fill" aria-hidden="true"></i> Message sent! I'll reply within 24 hours.
+            </div>
+            <div id="formError" class="form-alert alert-error-custom" role="alert" style="display:none">
+              <i class="bi bi-x-circle-fill" aria-hidden="true"></i> Something went wrong. Please email me directly.
+            </div>
+
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="field-label" for="fname">Your Name *</label>
+                <input type="text" id="fname" name="name" class="field-input" placeholder="John Doe" required autocomplete="name" />
+              </div>
+              <div class="col-md-6">
+                <label class="field-label" for="femail">Email Address *</label>
+                <input type="email" id="femail" name="email" class="field-input" placeholder="john@example.com" required autocomplete="email" />
+              </div>
+              <div class="col-12">
+                <label class="field-label" for="fsubject">Subject *</label>
+                <input type="text" id="fsubject" name="subject" class="field-input" placeholder="Project Discussion" required />
+              </div>
+              <div class="col-12">
+                <label class="field-label" for="fmessage">Message *</label>
+                <textarea id="fmessage" name="message" class="field-input field-textarea" placeholder="Tell me about your project..." required></textarea>
+              </div>
+              <div class="col-12">
+                <button type="button" id="sendBtn" class="btn-primary-custom w-100">
+                  <span id="btnText"><i class="bi bi-send-fill" aria-hidden="true"></i> Send Message</span>
+                  <span id="btnLoading" style="display:none"><i class="bi bi-hourglass-split" aria-hidden="true"></i> Sending...</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════
+       FOOTER
+  ══════════════════════════════ -->
+  <footer role="contentinfo">
+    <div class="container">
+      <div class="footer-logo">&lt;Hassan Mehdi /&gt;</div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <p class="footer-copy">
+        &copy; <span id="year"></span> Hassan Mehdi &mdash; Full Stack Web Developer
+        <br><span>Built with HTML, CSS, Bootstrap &amp; Node.js</span>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Back To Top Button -->
+  <button id="backToTop" aria-label="Back to top" title="Back to top">
+    <i class="bi bi-arrow-up" aria-hidden="true"></i>
+  </button>
+
+  <!-- Bootstrap 5 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Your Custom JS (must be last) -->
+  <script src="js/main.js"></script>
+</body>
+</html>
