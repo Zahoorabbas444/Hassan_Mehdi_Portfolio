@@ -17,10 +17,11 @@ const CONFIG = {
 
   // Typed text phrases in the hero section
   typedPhrases: [
-    'I build fast, modern web apps.',
-    'MERN Stack Developer.',
-    'Full Stack Engineer.',
-    'Open to freelance & full-time.',
+    'AI & Full Stack Developer.',
+    'Building AI-powered web applications.',
+    'Agentic AI & Computer Vision Enthusiast.',
+    'Open to freelance & full-time.'
+
   ],
 };
 
